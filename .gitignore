@@ -1,0 +1,4 @@
+goorm.*
+bin/
+.vscode/
+.git/
