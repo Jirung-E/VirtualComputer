@@ -7,16 +7,17 @@
 namespace MainModule {
     class Core {
         private: std::thread core_thread;
-
-        private: void load();
-        private: void execute();
-        private: void halt();
+        private: void (*process)();
 
     public:
         Core();
         ~Core();
 
-        void processing(void (*process)());
+        public: void processing(void (*process)());
+
+        private: void load(void (*process)());
+        private: void execute();
+        private: void halt();
     };
 }
 
