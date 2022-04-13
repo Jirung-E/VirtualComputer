@@ -1,5 +1,6 @@
 #include "Core.hpp"
 
+using namespace std;
 using namespace MainModule;
 
 
