@@ -16,6 +16,8 @@ namespace Utils {
     void log(std::string str);
     void errorlog(std::string str);
 
+    std::string toString(int i);
+
     bool failed();
     bool success();
 }

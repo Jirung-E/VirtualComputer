@@ -28,6 +28,10 @@ namespace Utils {
         }
     }
 
+    string toString(int i) {
+        return to_string(i);
+    }
+
     bool failed() {
         return false;
     }
