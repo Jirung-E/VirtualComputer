@@ -6,7 +6,7 @@ using namespace TestModule;
 using namespace Utils;
 
 
-Test::Test() : test_case { new TestCase*[10] } {
+Test::Test() : test_case { new TestCase*[10] }, test_case_num { 10 } {
 
 }
 
