@@ -12,7 +12,9 @@ namespace Utils {
     bool show_log = false;
 
     void print(std::string str);
+    void println(std::string str);
     void log(std::string str);
+    void errorlog(std::string str);
 }
 
 #endif

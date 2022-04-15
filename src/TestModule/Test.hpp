@@ -14,6 +14,7 @@ namespace TestModule {
         ~Test();
 
         public: void runAllTestCase();
+        public: void startTestAndShowResult();
     };
 }
 
