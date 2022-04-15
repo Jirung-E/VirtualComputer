@@ -1,4 +1,5 @@
 #include "Util.hpp"
+
 #include <iostream>
 
 using namespace std;
@@ -14,13 +15,13 @@ namespace Utils {
     }
 
     void log(string str) {
-        if(show_log == true) {
+        if(Utils::show_log == true) {
             printf("log: %s\n", str.c_str());
         }
     }
 
     void errorlog(string str) {
-        if(show_log == true) {
+        if(Utils::show_log == true) {
             printf("error log: %s\n", str.c_str());
         }
     }
