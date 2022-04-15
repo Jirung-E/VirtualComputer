@@ -22,7 +22,7 @@ void Test::runAllTestCase() {
 
 void Test::startTestAndShowResult() {
     for(int i=0; i<test_case_num; ++i) {
-        print("TestCase[" + i + "]: ");
+        print("TestCase[" + std::to_string(i) + "]: ");
 
         int test_result = test_case[i]->main();
         if(test_result == 0) {
