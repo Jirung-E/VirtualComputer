@@ -12,4 +12,6 @@ int CoreTest::main() {
     Core core;
 
     core.processing([]() { for(int i=0; i<10; ++i) { println(toString(i)); } });
+
+    return 0;
 }
