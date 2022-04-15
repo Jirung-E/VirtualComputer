@@ -6,21 +6,21 @@
 
 
 namespace Utils {
-    void print(string str) {
+    void print(std::string str) {
         printf("%s", str.c_str());
     }
 
-    void println(string str) {
+    void println(std::string str) {
         printf("%s\n", str.c_str());
     }
 
-    void log(string str) {
+    void log(std::string str) {
         if(show_log == true) {
             printf("log: %s\n", str.c_str());
         }
     }
 
-    void errorlog(string str) {
+    void errorlog(std::string str) {
         if(show_log == true) {
             printf("error log: %s\n", str.c_str());
         }
