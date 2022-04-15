@@ -11,4 +11,6 @@ int UtilsTest::main() {
     println("Hi");
     log("?");
     errorlog("!");
+
+    return 0;
 }
