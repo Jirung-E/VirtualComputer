@@ -15,13 +15,13 @@ namespace Utils {
     }
 
     void log(std::string str) {
-        if(show_logs == true) {
+        if(show_log == true) {
             printf("log: %s\n", str.c_str());
         }
     }
 
     void errorlog(std::string str) {
-        if(show_logs == true) {
+        if(show_log == true) {
             printf("error log: %s\n", str.c_str());
         }
     }

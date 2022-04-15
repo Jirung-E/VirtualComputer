@@ -9,7 +9,7 @@ namespace Utils {
     typedef unsigned short count_t;
     typedef unsigned short num_t;
 
-    bool show_logs = false;
+    static bool show_log = false;
 
     void print(std::string str);
     void println(std::string str);
