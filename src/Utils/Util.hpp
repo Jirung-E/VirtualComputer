@@ -15,6 +15,9 @@ namespace Utils {
     void println(std::string str);
     void log(std::string str);
     void errorlog(std::string str);
+
+    bool failed();
+    bool success();
 }
 
 #endif

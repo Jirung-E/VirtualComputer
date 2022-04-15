@@ -27,4 +27,12 @@ namespace Utils {
             printf("error log: %s\n", str.c_str());
         }
     }
+
+    bool failed() {
+        return false;
+    }
+
+    bool success() {
+        return true;
+    }
 }
