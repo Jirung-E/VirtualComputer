@@ -6,7 +6,13 @@ using namespace TestModule;
 using namespace Utils;
 
 
-Test::Test() : test_case { }
+Test::Test() : test_case { new TestCase*[10] } {
+
+}
+
+Test::~Test() {
+    delete[] test_case;
+}
 
 void Test::runAllTestCase() {
     for(int i=0; i<test_case_num; ++i) {
