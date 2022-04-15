@@ -3,6 +3,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace chrono;
 
 
 namespace Utils {
@@ -39,4 +40,8 @@ namespace Utils {
     bool success() {
         return true;
     }
+	
+	void sleep(unsigned short time) {
+		this_thread::sleep_for(milliseconds(time));
+	}
 }

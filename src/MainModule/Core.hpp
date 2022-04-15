@@ -12,8 +12,10 @@ namespace MainModule {
     public:
         Core();
         ~Core();
+		
+		public: void startProcessing(void (*process)());
 
-        public: void processing(void (*process)());
+        private: void processing(void (*process)());
 
         private: void load(void (*process)());
         private: void execute();

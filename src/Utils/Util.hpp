@@ -2,6 +2,8 @@
 #define Util_hpp
 
 #include <string>
+#include <chrono>
+#include <thread>
 
 
 namespace Utils {
@@ -20,6 +22,8 @@ namespace Utils {
 
     bool failed();
     bool success();
+	
+	void sleep(unsigned short time);
 }
 
 #endif

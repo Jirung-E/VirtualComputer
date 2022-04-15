@@ -15,6 +15,16 @@ Core::~Core() {
 }
 
 
+void Core::startProcessing(void (*process)()) {
+	if(core_thread.joinable()) {
+        core_thread.join();
+    }
+	
+	core_thread = thread([&]() { processing(process); });
+	core_thread.detach();
+}
+
+
 void Core::processing(void (*process)()) {
     load(process);
     execute();
@@ -27,10 +37,9 @@ void Core::load(void (*process)()) {
 }
 
 void Core::execute() {
-    core_thread = thread([&]() { process(); });
+    process();
 }
 
 void Core::halt() {
-    core_thread.join();
     process = nullptr;
 }
