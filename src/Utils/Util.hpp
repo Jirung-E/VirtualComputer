@@ -6,6 +6,9 @@
 
 namespace Utils {
     typedef unsigned short index_t;
+    typedef unsigned short count_t;
+    typedef unsigned short num_t;
+
     bool show_log = false;
 
     void print(std::string str);

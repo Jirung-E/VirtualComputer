@@ -6,7 +6,7 @@
 
 namespace TestModule {
     class Test {
-        private: const int test_case_num;
+        private: int test_case_num;
         private: TestCase** test_case;
 
     public:
