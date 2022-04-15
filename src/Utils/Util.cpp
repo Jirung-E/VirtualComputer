@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-using namespace std;
+//using namespace std;
 
 
 namespace Utils {
@@ -15,13 +15,13 @@ namespace Utils {
     }
 
     void log(string str) {
-        if(Utils::show_log == true) {
+        if(show_log == true) {
             printf("log: %s\n", str.c_str());
         }
     }
 
     void errorlog(string str) {
-        if(Utils::show_log == true) {
+        if(show_log == true) {
             printf("error log: %s\n", str.c_str());
         }
     }
