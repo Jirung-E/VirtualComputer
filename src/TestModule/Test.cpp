@@ -1,13 +1,14 @@
 #include "Test.hpp"
 
 #include "../Utils/Util.hpp"
+#include "TestCase/TestCases.hpp"
 
 using namespace TestModule;
 using namespace Utils;
 
 
-Test::Test() : test_case { new TestCase*[10] }, test_case_num { 10 } {
-
+Test::Test() : test_case { new TestCase*[1] }, test_case_num { 1 } {
+	test_case[0] = new UtilsTest();
 }
 
 Test::~Test() {

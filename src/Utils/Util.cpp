@@ -6,6 +6,8 @@ using namespace std;
 
 
 namespace Utils {
+	bool show_log = false;
+	
     void print(string str) {
         printf("%s", str.c_str());
     }

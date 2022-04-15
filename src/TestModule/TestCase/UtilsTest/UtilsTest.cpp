@@ -7,6 +7,8 @@ using namespace Utils;
 
 
 int UtilsTest::main() {
+	log("may show_log == false");
+	
     show_log = true;
 
     print("Hello");
@@ -15,6 +17,8 @@ int UtilsTest::main() {
     errorlog("!");
 
     show_log = false;
+	
+	log("may show_log == false");
 
     return 0;
 }
