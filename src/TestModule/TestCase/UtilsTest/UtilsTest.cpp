@@ -6,7 +6,7 @@ using namespace TestModule;
 using namespace Utils;
 
 
-void UtilsTest::main() {
+int UtilsTest::main() {
     print("Hello");
     println("Hi");
     log("?");
