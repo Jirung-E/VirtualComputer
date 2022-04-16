@@ -21,7 +21,6 @@ void Core::startProcessing(void (*process)()) {
     }
 	
 	core_thread = thread([&]() { processing(process); });
-	core_thread.detach();
 }
 
 
