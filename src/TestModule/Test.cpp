@@ -31,7 +31,7 @@ void Test::startTestAndShowResult() {
             println("Passed.");
         }
         else {
-            println("Failed. (Error Code: " + test_result);
+            println("Failed. (Error Code: " + toString(test_result) + ")");
         }
     }
 }
