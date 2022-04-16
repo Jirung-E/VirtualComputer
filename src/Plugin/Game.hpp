@@ -4,7 +4,7 @@
 #include "../MainModule/Program.hpp"
 
 
-class Game : public Program {
+class Game : public MainModule::Program {
 public:
     Game(std::string title);
 
