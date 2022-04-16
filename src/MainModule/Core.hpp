@@ -18,9 +18,10 @@ namespace MainModule {
 
         private: void processing(void (*process)());
 
-        // private: void load(void (*process)());
-        // private: void execute();
-        // private: void halt();
+        private: void wait();
+        private: void load(void (*process)());
+        private: void execute();
+        private: void halt();
     };
 }
 
