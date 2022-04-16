@@ -22,6 +22,8 @@ namespace MainModule {
         private: void load(void (*process)());
         private: void execute();
         private: void halt();
+
+        public: bool isOccupied();
     };
 }
 

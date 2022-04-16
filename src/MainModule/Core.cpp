@@ -43,3 +43,7 @@ void Core::execute() {
 void Core::halt() {
     is_occupied = false;
 }
+
+bool Core::isOccupied() {
+    return is_occupied;
+}
