@@ -3,5 +3,6 @@
 
 #include "UtilsTest/UtilsTest.hpp"
 #include "MainModuleTest/CoreTest.hpp"
+#include "MainModuleTest/CPUTest.hpp"
 
 #endif
