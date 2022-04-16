@@ -27,7 +27,7 @@ void Core::wait() {
 
 void Core::processing(void (*process)()) {
     load(process);
-    core_thread = thread([&]() { execute(); });
+    core_thread = thread([&]() { execute(); halt(); });
     core_thread.detach();
 }
 
@@ -38,7 +38,6 @@ void Core::load(void (*process)()) {
 
 void Core::execute() {
     this->process();
-    halt();
 }
 
 void Core::halt() {

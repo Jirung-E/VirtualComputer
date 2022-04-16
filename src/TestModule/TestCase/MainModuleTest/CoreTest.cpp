@@ -31,7 +31,7 @@ int CoreTest::main() {
 	core.startProcessing([]() { for(int i=0; i<10; ++i) { println("4: " + toString(i)); } });
 	core.startProcessing([]() { for(int i=0; i<10; ++i) { println("5: " + toString(i)); } });
 	
-	//sleep(5000);
+	sleep(2000);
 
     return 0;
 }
