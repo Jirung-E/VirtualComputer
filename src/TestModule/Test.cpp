@@ -11,9 +11,9 @@ Test::Test() {
     for(int i=0; i<test_case_num; ++i) {
         test_case[i] = nullptr;
     }
-    test_case[0] = new UtilsTest();
-    test_case[1] = new CoreTest();
-    test_case[2] = new CPUTest();
+    // test_case[0] = new UtilsTest();
+    //test_case[1] = new CoreTest();
+    test_case[0] = new CPUTest();
 }
 
 Test::~Test() {
