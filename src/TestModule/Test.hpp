@@ -6,14 +6,13 @@
 
 namespace TestModule {
     class Test {
-        private: int test_case_num;
-        private: TestCase** test_case;
+        private: const int test_case_num = 200;
+        private: TestCase* test_case[200];
 
     public:
         Test();
         ~Test();
 
-        public: void runAllTestCase();
         public: void startTestAndShowResult();
     };
 }

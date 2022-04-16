@@ -4,41 +4,28 @@ using namespace std;
 using namespace MainModule;
 
 
-Core::Core() : process { nullptr } {
+Core::Core() : is_occupied { false } {
 
 }
 
 Core::~Core() {
-    if(core_thread.joinable()) {
-        halt();
-    }
+    
 }
 
 
 void Core::startProcessing(void (*process)()) {
-	if(core_thread.joinable()) {
-        core_thread.join();
+    while(is_occupied) {
+        continue;
     }
-	
-	core_thread = thread([&]() { processing(process); });
+    
+    is_occupied = true;
+    this->process = process;
+    core_thread = thread([&]() { processing(process); });
+    core_thread.detach();
 }
 
 
 void Core::processing(void (*process)()) {
-    load(process);
-    execute();
-    halt();
-}
-
-
-void Core::load(void (*process)()) {
-    this->process = process;
-}
-
-void Core::execute() {
-    process();
-}
-
-void Core::halt() {
-    process = nullptr;
+    this->process();
+    is_occupied = false;
 }
