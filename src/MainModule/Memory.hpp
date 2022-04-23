@@ -11,7 +11,7 @@ namespace MainModule {
         private: Sector* sector;
 
     private:
-        num_t getNumOfFilledSectors() const;
+        Utils::num_t numOfFilledSectors() const;
 
     public:
         Memory(Utils::num_t num_of_sectors);

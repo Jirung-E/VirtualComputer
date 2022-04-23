@@ -21,6 +21,8 @@ num_t Memory::numOfFilledSectors() const {
             num_of_filled_sectors++;
         }
     }
+    
+    return num_of_filled_sectors;
 }
 
 void Memory::push(Program* program) {

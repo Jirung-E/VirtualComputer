@@ -29,8 +29,11 @@ namespace Utils {
         }
     }
 
-    string toString(int i) {
-        return to_string(i);
+    string toString(int num) {
+        return to_string(num);
+    }
+    string toString(float num) {
+        return to_string(num);
     }
 
     bool failed() {

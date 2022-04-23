@@ -18,7 +18,8 @@ namespace Utils {
     void log(std::string str);
     void errorlog(std::string str);
 
-    std::string toString(int i);
+    std::string toString(int num);
+    std::string toString(float num);
 
     bool failed();
     bool success();

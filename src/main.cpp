@@ -16,6 +16,8 @@ void Play() {
 }
 
 void MainBoardTest() {
+    Game g { "temp_game" };
+    
     CPU quadcore_cpu;
     RAM ram_8;
     Memory ssd { 16 };
@@ -25,6 +27,10 @@ void MainBoardTest() {
     main_board.putRAM(ram_8);
     main_board.putMemory(ssd);
     main_board.putExternalMemory(sdcard);
+    
+    ssd.push(&g);
+    
+    println(toString(ssd.getPercentOfMemoryIsFilled()));
 }
 
 int main() {
