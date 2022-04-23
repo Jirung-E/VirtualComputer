@@ -22,9 +22,9 @@ void Mainboard::putRAM(RAM& ram) {
 }
 
 void Mainboard::putMemory(Memory& memory) {
-    this->memory = memory;
+    this->memory = &memory;
 }
 
 void Mainboard::putExternalMemory(Memory& external_memory) {
-    this->external_memory = external_memory;
+    this->external_memory = &external_memory;
 }

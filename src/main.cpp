@@ -2,6 +2,7 @@
 #include "Plugin/Game.hpp"
 #include "MainModule/CPU.hpp"
 #include "Utils/Util.hpp"
+#include "MainModule/Mainboard.hpp"
 
 using namespace TestModule;
 using namespace MainModule;
@@ -14,6 +15,18 @@ void Play() {
     game.exit();
 }
 
+void MainBoardTest() {
+    CPU quadcore_cpu;
+    RAM ram_8;
+    Memory ssd { 16 };
+    Memory sdcard { 16 };
+    Mainboard main_board;
+    main_board.putCPU(quadcore_cpu);
+    main_board.putRAM(ram_8);
+    main_board.putMemory(ssd);
+    main_board.putExternalMemory(sdcard);
+}
+
 int main() {
 	Test t;
     //t.startTestAndShowResult();
@@ -22,4 +35,6 @@ int main() {
     cpu.push(Play);
     
     sleep(1321);
+    
+    MainBoardTest();
 }

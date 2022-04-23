@@ -1,7 +1,7 @@
 #ifndef RAM_hpp
 #define RAM_hpp
 
-#include "RAM.hpp"
+#include "Memory.hpp"
 
 
 namespace MainModule {
