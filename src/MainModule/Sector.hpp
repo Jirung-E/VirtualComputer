@@ -15,6 +15,7 @@ namespace MainModule {
         bool isEmpty() const;
         
         void push(Program* program);
+        void pop();
     };
 }
 
