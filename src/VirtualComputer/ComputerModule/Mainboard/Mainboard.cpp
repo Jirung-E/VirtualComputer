@@ -1,5 +1,6 @@
 #include "Mainboard.hpp"
 
+using namespace std;
 using namespace ComputerModule;
 
 
@@ -12,19 +13,70 @@ Mainboard::~Mainboard() {
 }
 
 
-
-void Mainboard::putCPU(CPU& cpu) {
+void Mainboard::plugCPU(CPU& cpu) {
     this->cpu = &cpu;
 }
 
-void Mainboard::putRAM(RAM& ram) {
+void Mainboard::plugRAM(RAM& ram) {
     this->ram = &ram;
 }
 
-void Mainboard::putMemory(Memory& memory) {
+void Mainboard::plugMemory(Memory& memory) {
     this->memory = &memory;
 }
 
-void Mainboard::putExternalMemory(Memory& external_memory) {
+void Mainboard::plugExternalMemory(Memory& external_memory) {
     this->external_memory = &external_memory;
+}
+
+bool Mainboard::isRunnable() const {
+    if(cpu == nullptr) {
+        return false;
+    }
+    if(ram == nullptr) {
+        return false;
+    }
+    if(memory == nullptr) {
+        return false;
+    }
+
+    return true;
+}
+
+
+void Mainboard::playProgram(string program_title) {
+    if(!isRunnable()) {
+        return;
+    }
+
+    if(!isOnRAM(program_title)) {
+        loadProgram(program_title);
+    }
+    cpu.push(ram.get(program_title)->play);
+}
+
+// void Mainboard::exitProgram(string program_title) {
+
+// }
+
+// void Mainboard::exitAllProgram() {
+
+// }
+
+
+void Mainboard::loadProgram(string program_title) {
+    if(!isRunnable()) {
+        return;
+    }
+    ram.push(memory.get(program_title));
+}
+
+bool Mainboard::isOnRAM(string program_title) {
+    if(!isRunnable()) {
+        return false;
+    }
+    if(ram.get(program_title) != nullptr) {
+        return true;
+    }
+    return false;
 }

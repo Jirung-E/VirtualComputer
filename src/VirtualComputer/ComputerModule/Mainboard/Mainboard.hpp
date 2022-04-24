@@ -17,10 +17,20 @@ namespace ComputerModule {
         Mainboard();
         ~Mainboard();
 
-        void putCPU(CPU& cpu);
-        void putRAM(RAM& ram);
-        void putMemory(Memory& memory);
-        void putExternalMemory(Memory& external_memory);
+        void plugCPU(CPU& cpu);
+        void plugRAM(RAM& ram);
+        void plugMemory(Memory& memory);
+        void plugExternalMemory(Memory& external_memory);
+
+        bool isRunnable() const;
+
+        void playProgram(std::string program_title);
+        // void exitProgram(std::string program_title);
+        // void exitAllProgram();
+
+    private: 
+        void loadProgram(std::string program_title);
+        bool isOnRAM(std::string program_title) const;
     };
 }
 
