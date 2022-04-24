@@ -1,5 +1,5 @@
-#ifndef Util_hpp
-#define Util_hpp
+#ifndef Utils_hpp
+#define Utils_hpp
 
 #include <string>
 #include <chrono>
