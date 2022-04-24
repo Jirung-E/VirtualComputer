@@ -5,12 +5,10 @@
 #include <chrono>
 #include <thread>
 
+#include "UtilTypes.hpp"
+
 
 namespace Utils {
-    typedef unsigned short index_t;
-    typedef unsigned short count_t;
-    typedef unsigned short num_t;
-
     extern bool show_log;
 
     void print(std::string str);
