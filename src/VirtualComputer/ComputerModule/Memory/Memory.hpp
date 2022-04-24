@@ -1,11 +1,11 @@
 #ifndef Memory_hpp
 #define Memory_hpp
 
-#include "../Utils/Util.hpp"
+#include "../../Utils/UtilTypes.hpp"
 #include "Sector.hpp"
 
 
-namespace MainModule {
+namespace ComputerModule {
     class Memory {
         private: Utils::num_t num_of_sectors;
         private: Sector* sector;

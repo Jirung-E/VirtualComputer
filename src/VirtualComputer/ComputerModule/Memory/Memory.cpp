@@ -1,7 +1,7 @@
 #include "Memory.hpp"
 
 using namespace std;
-using namespace MainModule;
+using namespace ComputerModule;
 using namespace Utils;
 
 
@@ -59,14 +59,14 @@ void Memory::push(Program* program) {
     // 여기까지 오면 push 실패임.
 }
 
-void Memory::pop(std::string title) {
+void Memory::pop(string title) {
     int idx = indexOf(title);
     if(idx >= 0) {
         sector[idx].pop();
     }
 }
 
-Program* Memory::get(std::string title) {
+Program* Memory::get(string title) {
     int idx = indexOf(title);
     if(idx >= 0) {
         return sector[idx].getData();

@@ -1,7 +1,7 @@
 #include "Program.hpp"
 
 using namespace std;
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 Program::Program(string title) : title_ { title } {

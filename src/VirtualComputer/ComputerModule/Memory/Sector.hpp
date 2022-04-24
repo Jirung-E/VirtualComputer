@@ -1,10 +1,10 @@
 #ifndef Sector_hpp
 #define Sector_hpp
 
-#include "Program.hpp"
+#include "../Program/Program.hpp"
 
 
-namespace MainModule {
+namespace ComputerModule {
     class Sector {
         private: Program* program;
         private: bool is_empty;

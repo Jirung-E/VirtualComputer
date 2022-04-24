@@ -1,6 +1,6 @@
 #include "RAM.hpp"
 
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 RAM::RAM() : Memory { 4 } {

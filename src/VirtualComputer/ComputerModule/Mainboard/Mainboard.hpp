@@ -1,12 +1,12 @@
 #ifndef Mainboard_hpp
 #define Mainboard_hpp
 
-#include "CPU.hpp"
-#include "RAM.hpp"
-#include "Memory.hpp"
+#include "../CPU/CPU.hpp"
+#include "../Memory/RAM.hpp"
+#include "../Memory/Memory.hpp"
 
 
-namespace MainModule {
+namespace ComputerModule {
     class Mainboard {
         CPU* cpu;
         RAM* ram;

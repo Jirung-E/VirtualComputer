@@ -1,6 +1,6 @@
 #include "Mainboard.hpp"
 
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 Mainboard::Mainboard() {

@@ -1,7 +1,7 @@
 #include "Core.hpp"
 
 using namespace std;
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 Core::Core() : is_occupied { false } {

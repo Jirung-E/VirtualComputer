@@ -1,6 +1,6 @@
 #include "Sector.hpp"
 
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 Sector::Sector() : program { nullptr }, is_empty { true } {

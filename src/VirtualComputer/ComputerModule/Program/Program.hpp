@@ -4,7 +4,7 @@
 #include <string>
 
 
-namespace MainModule {
+namespace ComputerModule {
     class Program {
         private: const std::string title_;
 

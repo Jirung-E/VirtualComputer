@@ -4,7 +4,7 @@
 #include "Memory.hpp"
 
 
-namespace MainModule {
+namespace ComputerModule {
     class RAM : public Memory {
     public:
         RAM();

@@ -2,10 +2,10 @@
 #define CPU_hpp
 
 #include "Core.hpp"
-#include "../Utils/Util.hpp"
+#include "../../Utils/UtilTypes.hpp"
 
 
-namespace MainModule {
+namespace ComputerModule {
     class CPU {
         private: Core core[4];
         private: const Utils::num_t core_num = 4;

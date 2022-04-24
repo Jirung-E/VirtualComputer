@@ -1,6 +1,6 @@
 #include "CPU.hpp"
 
-using namespace MainModule;
+using namespace ComputerModule;
 
 
 CPU::CPU() : running_core_num { 0 } {

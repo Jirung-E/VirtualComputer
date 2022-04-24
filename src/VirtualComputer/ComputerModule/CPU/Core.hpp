@@ -4,7 +4,7 @@
 #include <thread>
 
 
-namespace MainModule {
+namespace ComputerModule {
     class Core {
         private: std::thread core_thread;
         private: void (*process)();
