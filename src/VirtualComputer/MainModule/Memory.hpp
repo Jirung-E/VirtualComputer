@@ -12,13 +12,18 @@ namespace MainModule {
 
     private:
         Utils::num_t numOfFilledSectors() const;
+        unsigned int indexOf(std::string title) const;
 
     public:
         Memory(Utils::num_t num_of_sectors);
         ~Memory();
 
+        size_t memorySize() const;
+        float percentageOfMemoryFilled() const;
+
         void push(Program* program);
-        float getPercentOfMemoryIsFilled() const;
+        void pop(std::string title);
+        Program* get(std::string title);
     };
 }
 

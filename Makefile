@@ -32,3 +32,5 @@ $(LIB) : $(VCOBJECTS)
 	$(MAKELIB) $(LIB) $(VCOBJ_DIR)/%.o
 
 -include $(VCDEPS)
+
+# 모루겟소용

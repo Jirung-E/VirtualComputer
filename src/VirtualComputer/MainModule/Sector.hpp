@@ -16,6 +16,7 @@ namespace MainModule {
         
         void push(Program* program);
         void pop();
+        Program* const getData();
     };
 }
 

@@ -6,13 +6,13 @@
 
 namespace MainModule {
     class Program {
-        private: const std::string title;
+        private: const std::string title_;
 
     public:
         Program(std::string title);
         virtual ~Program();
 
-        std::string Title() const;
+        std::string title() const;
 
         virtual void play() = 0;
         virtual void exit() = 0;

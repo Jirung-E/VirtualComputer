@@ -22,3 +22,7 @@ void Sector::pop() {
     this->program = nullptr;
     is_empty = true;
 }
+
+Program* const Sector::getData() {
+    return program;
+}

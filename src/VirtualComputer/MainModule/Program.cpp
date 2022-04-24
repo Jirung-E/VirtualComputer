@@ -4,14 +4,14 @@ using namespace std;
 using namespace MainModule;
 
 
-Program::Program(string title) : title { title } {
+Program::Program(string title) : title_ { title } {
 
 }
 
-Program::~Program() {
+virtual Program::~Program() {
 
 }
 
-std::string Program::Title() const {
+std::string Program::title() const {
     return title;
 }
