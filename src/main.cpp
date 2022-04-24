@@ -28,7 +28,11 @@ void MainBoardTest() {
     
     ssd.push(&g);
     
-    println(toString(ssd.getPercentOfMemoryIsFilled()));
+    println(toString(ssd.percentageOfMemoryFilled()));
+	
+	ssd.pop("temp_game");
+	
+	println(toString(ssd.percentageOfMemoryFilled()));
 }
 
 int main() {
