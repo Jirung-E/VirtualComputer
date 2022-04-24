@@ -4,5 +4,7 @@ bin/
 obj/
 src/VirtualComputerTest/
 
+Makefile
+
 .vscode/
 .git/
