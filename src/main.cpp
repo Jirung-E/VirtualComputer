@@ -1,10 +1,8 @@
-#include "TestModule/Test.hpp"
-#include "Plugin/Game.hpp"
-#include "MainModule/CPU.hpp"
-#include "Utils/Util.hpp"
-#include "MainModule/Mainboard.hpp"
+#include "VirtualComputer/Plugin/Game.hpp"
+#include "VirtualComputer/MainModule/CPU.hpp"
+#include "VirtualComputer/Utils/Util.hpp"
+#include "VirtualComputer/MainModule/Mainboard.hpp"
 
-using namespace TestModule;
 using namespace MainModule;
 using namespace Utils;
 
@@ -34,9 +32,6 @@ void MainBoardTest() {
 }
 
 int main() {
-	Test t;
-    //t.startTestAndShowResult();
-    
     CPU cpu;
     cpu.push(Play);
     
