@@ -8,10 +8,10 @@ Program::Program(string title) : title_ { title } {
 
 }
 
-virtual Program::~Program() {
+Program::~Program() {
 
 }
 
 std::string Program::title() const {
-    return title;
+    return title_;
 }
