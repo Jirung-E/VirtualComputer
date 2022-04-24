@@ -74,3 +74,10 @@ Program* Memory::get(string title) {
 
     return nullptr;
 }
+
+bool Memory::have(string title) const {
+	if(indexOf(title) >= 0) {
+		return true;
+	}
+	return false;
+}

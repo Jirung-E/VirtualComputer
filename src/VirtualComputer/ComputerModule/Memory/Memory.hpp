@@ -24,6 +24,7 @@ namespace ComputerModule {
         void push(Program* program);
         void pop(std::string title);
         Program* get(std::string title);
+		bool have(std::string title) const;
     };
 }
 

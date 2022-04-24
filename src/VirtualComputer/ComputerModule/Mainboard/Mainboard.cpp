@@ -52,7 +52,7 @@ void Mainboard::playProgram(string program_title) {
     if(!isOnRAM(program_title)) {
         loadProgram(program_title);
     }
-    cpu.push(ram.get(program_title)->play);
+    cpu->push(ram->get(program_title)->play);
 }
 
 // void Mainboard::exitProgram(string program_title) {
@@ -68,14 +68,14 @@ void Mainboard::loadProgram(string program_title) {
     if(!isRunnable()) {
         return;
     }
-    ram.push(memory.get(program_title));
+    ram->push(memory->get(program_title));
 }
 
-bool Mainboard::isOnRAM(string program_title) {
+bool Mainboard::isOnRAM(string program_title) const {
     if(!isRunnable()) {
         return false;
     }
-    if(ram.get(program_title) != nullptr) {
+    if(ram->have(program_title)) {
         return true;
     }
     return false;
