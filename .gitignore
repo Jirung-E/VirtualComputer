@@ -1,5 +1,8 @@
 goorm.*
+
 bin/
 obj/
+src/VirtualComputerTest/
+
 .vscode/
 .git/
