@@ -3,13 +3,12 @@
 
 #include <thread>
 
-#include "ProcessingUnit.hpp"
-
 
 namespace ComputerModule {
+	using Process = void (*)();
+	
     class Core {
         private: std::thread core_thread;
-        private: ProcessingUnit unit;
 		private: Process process;           // -> Resister
         private: bool is_occupied;
 
