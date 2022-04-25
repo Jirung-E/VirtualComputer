@@ -5,6 +5,7 @@ namespace ComputerModule {
     using Process = void (*)();
 
     class ProcessingUnit {
+        private: Process process;           // -> Resister
     public:
         ProcessingUnit();
         ~ProcessingUnit();

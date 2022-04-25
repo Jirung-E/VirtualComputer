@@ -19,30 +19,10 @@ void Core::startProcessing(Process process) {
     core_thread.detach();
 }
 
-
 void Core::wait() {
     while(is_occupied) {
         continue;
     }
-}
-
-void Core::processing(Process process) {
-	load(process);
-	execute();
-	halt();
-}
-
-void Core::load(Process process) {
-    is_occupied = true;
-    this->process = process;
-}
-
-void Core::execute() {
-    this->process();
-}
-
-void Core::halt() {
-    is_occupied = false;
 }
 
 bool Core::isOccupied() {
