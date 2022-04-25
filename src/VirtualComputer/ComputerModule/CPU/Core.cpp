@@ -15,7 +15,7 @@ Core::~Core() {
 
 void Core::startProcessing(Process process) {
     wait();
-	core_thread = thread(&Core::processing, this);
+	core_thread = thread(&ProcessingUnit::startProcess, &unit, process);
     core_thread.detach();
 }
 
