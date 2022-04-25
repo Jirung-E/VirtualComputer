@@ -5,8 +5,6 @@ namespace ComputerModule {
     using Process = void (*)();
 
     class ProcessingUnit {
-        private: std::thread unit_thread;
-
     public:
         ProcessingUnit();
         ~ProcessingUnit();
