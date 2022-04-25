@@ -54,23 +54,17 @@ void Mainboard::playProgram(string program_title) {
     }
 	
 	Program* target = ram->get(program_title);
-    cpu->push(target->play);
+	//Process proc = target->play;
+    //cpu->push(target->play);
 }
-
-// void Mainboard::exitProgram(string program_title) {
-
-// }
-
-// void Mainboard::exitAllProgram() {
-
-// }
 
 
 void Mainboard::loadProgram(string program_title) {
     if(!isRunnable()) {
         return;
     }
-    ram->push(memory->get(program_title));
+	Program* target = memory->get(program_title);
+    ram->push(target);
 }
 
 bool Mainboard::isOnRAM(string program_title) const {

@@ -25,8 +25,6 @@ namespace ComputerModule {
         bool isRunnable() const;
 
         void playProgram(std::string program_title);
-        // void exitProgram(std::string program_title);
-        // void exitAllProgram();
 
     private: 
         void loadProgram(std::string program_title);
