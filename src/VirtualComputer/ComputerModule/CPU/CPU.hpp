@@ -15,7 +15,7 @@ namespace ComputerModule {
         CPU();
         ~CPU();
 
-        public: void push(void (*process)());
+        public: void push(Process process);
 
         private: int findEmptyCoreIndex();
     };

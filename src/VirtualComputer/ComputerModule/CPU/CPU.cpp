@@ -11,7 +11,7 @@ CPU::~CPU() {
 
 }
 
-void CPU::push(void (*process)()) {
+void CPU::push(Process process) {
     if(running_core_num >= core_num) {
         return;
     }

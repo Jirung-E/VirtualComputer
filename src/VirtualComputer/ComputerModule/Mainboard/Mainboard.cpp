@@ -52,7 +52,9 @@ void Mainboard::playProgram(string program_title) {
     if(!isOnRAM(program_title)) {
         loadProgram(program_title);
     }
-    cpu->push(ram->get(program_title)->play);
+	
+	Program* target = ram->get(program_title);
+    cpu->push(target->play);
 }
 
 // void Mainboard::exitProgram(string program_title) {

@@ -13,9 +13,10 @@ Core::~Core() {
 }
 
 
-void Core::startProcessing(void (*process)()) {
+void Core::startProcessing(Process process) {
     wait();
-    processing(process);
+	core_thread = thread(&Core::processing, this);
+    core_thread.detach();
 }
 
 
@@ -25,13 +26,13 @@ void Core::wait() {
     }
 }
 
-void Core::processing(void (*process)()) {
-    load(process);
-    core_thread = thread([&]() { execute(); halt(); });
-    core_thread.detach();
+void Core::processing(Process process) {
+	load(process);
+	execute();
+	halt();
 }
 
-void Core::load(void (*process)()) {
+void Core::load(Process process) {
     is_occupied = true;
     this->process = process;
 }
