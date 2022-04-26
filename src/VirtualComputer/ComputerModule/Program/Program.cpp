@@ -19,9 +19,9 @@ std::string Program::title() const {
 }
 
 void Program::play() {
-	Utils::println("Please...");
+	// 아무것도 하지 말것
 }
 
 void Program::exit() {
-	
+	// 아무것도 하지 말것
 }

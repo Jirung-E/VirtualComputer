@@ -54,7 +54,6 @@ void Mainboard::playProgram(string program_title) {
     }
 	
 	Program* target = ram->get(program_title);
-	//Process proc = target->play;
     //cpu->push(target->play);
 }
 
