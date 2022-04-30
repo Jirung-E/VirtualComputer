@@ -3,7 +3,7 @@
 using namespace ComputerModule;
 
 
-CPU::CPU() : program { nullptr }, running_core_num { 0 } {
+CPU::CPU() : running_core_num { 0 } {
 
 }
 
@@ -12,15 +12,13 @@ CPU::~CPU() {
 }
 
 void CPU::push(Program* program) {
-    if(running_core_num >= core_num) {
-        return;
-    }
-
     int index = findEmptyCoreIndex();
 	
-	this->program[index] = program;
-
-    core[index].startProcessing(this->program[index]->play);
+	if(index < 0) {
+		return;
+	}
+	
+    core[index].startProcessing(program);
 }
 
 int CPU::findEmptyCoreIndex() {

@@ -27,7 +27,7 @@ namespace ComputerModule {
         void playProgram(std::string program_title);
 
     private: 
-        void loadProgram(std::string program_title);
+        void loadProgramIntoRAM(std::string program_title);
         bool isOnRAM(std::string program_title) const;
     };
 }

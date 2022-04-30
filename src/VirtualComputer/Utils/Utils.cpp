@@ -35,6 +35,14 @@ namespace Utils {
     string toString(float num) {
         return to_string(num);
     }
+    string toString(bool b) {
+        if(b == true) {
+            return "true";
+        }
+        else {
+            return "false";
+        }
+    }
 
     bool failed() {
         return false;

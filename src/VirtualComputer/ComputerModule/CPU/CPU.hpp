@@ -9,7 +9,6 @@
 namespace ComputerModule {
     class CPU {
         private: Core core[4];
-		private: Program* program[4];
         private: const Utils::num_t core_num = 4;
         private: Utils::num_t running_core_num;
 

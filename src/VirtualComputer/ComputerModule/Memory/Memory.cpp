@@ -28,7 +28,7 @@ num_t Memory::numOfFilledSectors() const {
     return num_of_filled_sectors;
 }
 
-unsigned int Memory::indexOf(string title) const {
+int Memory::indexOf(string title) const {
     for(int i=0; i<memorySize(); ++i) {
         if(sector[i].isEmpty() == false) {
             if(sector[i].getData()->title() == title) {

@@ -3,23 +3,25 @@
 
 #include <thread>
 
+#include "../Program/Program.hpp"
+
 
 namespace ComputerModule {
-	using Process = void (*)();
+	using Process = void (*)();            // 각 보다가 삭제예정
 	
     class Core {
         private: std::thread core_thread;
-		private: Process process;           // -> Resister
+        private: Program* program;
         private: bool is_occupied;
 
     public:
         Core();
         ~Core();
 
-        public: void startProcessing(Process process);
-		
-		private: void processing(Process process);
-		private: void load(Process process);
+        public: void startProcessing(Program* program);
+        
+		private: void processing(Program* program);
+		private: void load(Program* program);
 		private: void execute();
 		private: void halt();
 

@@ -18,6 +18,7 @@ namespace Utils {
 
     std::string toString(int num);
     std::string toString(float num);
+    std::string toString(bool b);
 
     bool failed();
     bool success();

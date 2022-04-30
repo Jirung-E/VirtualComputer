@@ -15,26 +15,26 @@ Core::~Core() {
 }
 
 
-void Core::startProcessing(Process process) {
+void Core::startProcessing(Program* program) {
     wait();
-	core_thread = thread(&Core::processing, this, process);
+	core_thread = thread([&]() { processing(program); });
     core_thread.detach();
 }
 
-void Core::processing(Process process) {
-	//Utils::println("...wtf");
-	load(process);
+void Core::processing(Program* program) {
+	load(program);
 	execute();
 	halt();
 }
 
-void Core::load(Process process) {
-	this->process = process;
+void Core::load(Program* program) {
+	this->program = program;
 	is_occupied = true;
 }
 
 void Core::execute() {
-	process();
+    program->play();
+    program->exit();
 }
 
 void Core::halt() {

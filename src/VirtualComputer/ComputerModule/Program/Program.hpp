@@ -14,8 +14,8 @@ namespace ComputerModule {
 
         std::string title() const;
 
-        virtual void play();
-        virtual void exit();
+        virtual void play() = 0;
+        virtual void exit() = 0;
     };
 }
 
