@@ -16,20 +16,20 @@ Mainboard::~Mainboard() {
 }
 
 
-void Mainboard::plugCPU(CPU& cpu) {
-    this->cpu = &cpu;
+void Mainboard::plugCPU(CPU* cpu) {
+    this->cpu = cpu;
 }
 
-void Mainboard::plugRAM(RAM& ram) {
-    this->ram = &ram;
+void Mainboard::plugRAM(RAM* ram) {
+    this->ram = ram;
 }
 
-void Mainboard::plugMemory(Memory& memory) {
-    this->memory = &memory;
+void Mainboard::plugMemory(Memory* memory) {
+    this->memory = memory;
 }
 
-void Mainboard::plugExternalMemory(Memory& external_memory) {
-    this->external_memory = &external_memory;
+void Mainboard::plugExternalMemory(Memory* external_memory) {
+    this->external_memory = external_memory;
 }
 
 bool Mainboard::isRunnable() const {

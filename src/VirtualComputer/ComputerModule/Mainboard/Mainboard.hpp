@@ -17,10 +17,10 @@ namespace ComputerModule {
         Mainboard();
         ~Mainboard();
 
-        void plugCPU(CPU& cpu);
-        void plugRAM(RAM& ram);
-        void plugMemory(Memory& memory);
-        void plugExternalMemory(Memory& external_memory);
+        void plugCPU(CPU* cpu);
+        void plugRAM(RAM* ram);
+        void plugMemory(Memory* memory);
+        void plugExternalMemory(Memory* external_memory);
 
         bool isRunnable() const;
 
