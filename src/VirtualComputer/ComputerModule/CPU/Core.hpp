@@ -11,7 +11,7 @@ namespace ComputerModule {
 	
     class Core {
         private: std::thread core_thread;
-        private: Program* program;
+        private: Program* program;        // -> Resister
         private: bool is_occupied;
 
     public:
