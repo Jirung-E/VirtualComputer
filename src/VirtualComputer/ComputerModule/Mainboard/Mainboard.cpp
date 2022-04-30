@@ -1,7 +1,10 @@
 #include "Mainboard.hpp"
 
+#include "../../Utils/Utils.hpp"
+
 using namespace std;
 using namespace ComputerModule;
+using namespace Utils;
 
 
 Mainboard::Mainboard() {
@@ -50,21 +53,23 @@ void Mainboard::playProgram(string program_title) {
     }
 
     if(!isOnRAM(program_title)) {
-        loadProgram(program_title);
+        loadProgramIntoRAM(program_title);
     }
 	
+    log("get program from ram.");
 	Program* target = ram->get(program_title);
-	//Process proc = target->play;
-    //cpu->push(target->play);
+    log("push to cpu...");
+    cpu->push(target);
 }
 
 
-void Mainboard::loadProgram(string program_title) {
+void Mainboard::loadProgramIntoRAM(string program_title) {
     if(!isRunnable()) {
         return;
     }
 	Program* target = memory->get(program_title);
     ram->push(target);
+    log("loaded.");
 }
 
 bool Mainboard::isOnRAM(string program_title) const {

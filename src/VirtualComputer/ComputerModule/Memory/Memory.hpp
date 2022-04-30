@@ -12,7 +12,7 @@ namespace ComputerModule {
 
     private:
         Utils::num_t numOfFilledSectors() const;
-        unsigned int indexOf(std::string title) const;
+        int indexOf(std::string title) const;
 
     public:
         Memory(Utils::num_t num_of_sectors);

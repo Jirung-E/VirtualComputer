@@ -4,6 +4,7 @@
 
 using namespace std;
 using namespace ComputerModule;
+using namespace Utils;
 
 
 Core::Core() : is_occupied { false } {
@@ -15,34 +16,41 @@ Core::~Core() {
 }
 
 
-void Core::startProcessing(Process process) {
+void Core::startProcessing(Program* program) {
     wait();
-	core_thread = thread(&Core::processing, this, process);
+    log("new thread..");
+    load(program);
+    log("loaded.");
+	core_thread = thread([&]() { processing(program); });
+    log("detach");
     core_thread.detach();
 }
 
-void Core::processing(Process process) {
-	//Utils::println("...wtf");
-	load(process);
+void Core::processing(Program* program) {
 	execute();
+    log("play time is over..");
 	halt();
 }
 
-void Core::load(Process process) {
-	this->process = process;
+void Core::load(Program* program) {
+	this->program = program;
 	is_occupied = true;
 }
 
 void Core::execute() {
-	process();
+    log("call program->play");
+    program->play();
 }
 
 void Core::halt() {
+    log("call program->exit()");
+    program->exit();
 	is_occupied = false;
 }
 
 void Core::wait() {
-    while(is_occupied) {
+    log("waiting..");
+    while(isOccupied()) {
         continue;
     }
 }

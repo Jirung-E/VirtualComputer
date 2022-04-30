@@ -1,6 +1,9 @@
 #include "CPU.hpp"
 
+#include "../../Utils/Utils.hpp"
+
 using namespace ComputerModule;
+using namespace Utils;
 
 
 CPU::CPU() : running_core_num { 0 } {
@@ -11,14 +14,15 @@ CPU::~CPU() {
 
 }
 
-void CPU::push(Process process) {
-    if(running_core_num >= core_num) {
-        return;
-    }
-
+void CPU::push(Program* program) {
+    log("finding empty core...");
     int index = findEmptyCoreIndex();
-
-    core[index].startProcessing(process);
+	if(index < 0) {
+		return;
+	}
+	
+    log("start processing...");
+    core[index].startProcessing(program);
 }
 
 int CPU::findEmptyCoreIndex() {

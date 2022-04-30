@@ -2,6 +2,7 @@
 #define CPU_hpp
 
 #include "Core.hpp"
+#include "../Program/Program.hpp"
 #include "../../Utils/UtilTypes.hpp"
 
 
@@ -14,8 +15,8 @@ namespace ComputerModule {
     public:
         CPU();
         ~CPU();
-
-        public: void push(Process process);
+		
+        void push(Program* program);
 
         private: int findEmptyCoreIndex();
     };
