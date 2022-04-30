@@ -3,6 +3,10 @@
 using namespace ComputerModule;
 
 
-RAM::RAM() : Memory { 4 } {
+RAM::RAM(Utils::num_t capacity) : Memory { capacity } {
+    
+}
+
+RAM::RAM() : RAM { 4 } {
     
 }

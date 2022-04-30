@@ -7,8 +7,8 @@
 
 namespace ComputerModule {
     class Memory {
-        private: Utils::num_t num_of_sectors;
-        private: Sector* sector;
+        private: const Utils::num_t num_of_sectors;
+        private: Sector* const sector;
 
     private:
         Utils::num_t numOfFilledSectors() const;

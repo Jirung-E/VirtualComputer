@@ -5,11 +5,8 @@ using namespace ComputerModule;
 using namespace Utils;
 
 
-Memory::Memory(num_t num_of_sectors) : num_of_sectors { num_of_sectors }, sector { nullptr } {
-    if(this->num_of_sectors <= 0) {
-        this->num_of_sectors = 1;
-    }
-    sector = new Sector[num_of_sectors];
+Memory::Memory(num_t num_of_sectors) : num_of_sectors { num_of_sectors }, sector { new Sector[num_of_sectors] } {
+    
 }
 
 Memory::~Memory() {
