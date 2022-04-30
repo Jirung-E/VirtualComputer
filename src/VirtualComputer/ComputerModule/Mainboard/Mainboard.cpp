@@ -57,7 +57,7 @@ void Mainboard::playProgram(string program_title) {
     }
 	
     log("get program from ram.");
-	Program* target = ram->get(program_title);
+    Program* target = ram->get(program_title);
     log("push to cpu...");
     cpu->push(target);
 }
@@ -67,7 +67,7 @@ void Mainboard::loadProgramIntoRAM(string program_title) {
     if(!isRunnable()) {
         return;
     }
-	Program* target = memory->get(program_title);
+    Program* target = memory->get(program_title);
     ram->push(target);
     log("loaded.");
 }
