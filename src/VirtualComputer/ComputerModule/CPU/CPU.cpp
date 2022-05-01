@@ -39,7 +39,6 @@ int CPU::findEmptyCoreIndex() {
             return i;
         }
     }
-
     return -1;
 }
 

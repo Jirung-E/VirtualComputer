@@ -12,6 +12,7 @@ Core::Core() : is_occupied { false } {
 }
 
 Core::~Core() {
+    log("~Core...");
     wait();
 }
 
