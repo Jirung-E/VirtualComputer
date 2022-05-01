@@ -19,6 +19,7 @@ namespace ComputerModule {
     public:
         void powerOn();
         void powerOff();
+        void doSomething();
     };
 }
 
