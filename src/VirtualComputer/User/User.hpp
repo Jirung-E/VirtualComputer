@@ -3,22 +3,27 @@
 
 #include <string>
 
-#include "../ComputerModule/ComputerModules.hpp"
+#include "../ComputerModule/Computer.hpp"
 
 
 namespace UserModule {
     class User {
-        private: std::string name;
-
-        private: ComputerModule::CPU cpu;
-        private: ComputerModule::Mainboard mainboard;
-        private: ComputerModule::RAM ram;
-        private: ComputerModule::Memory main_memory;
-        private: ComputerModule::Memory external_memory;
+        private: const std::string name;
+        private: ComputerModule::Computer* pc;
 
     public:
         User(std::string name);
         ~User();
+        
+    public:
+        void say(std::string dialogue) const;
+        
+        void setComputer(ComputerModule::Computer* computer);
+        void turnOnTheComputer();
+        void turnOffTheComputer();
+        bool haveComputer() const;
+        
+        ComputerModule::Computer* computer();
     };
 }
 

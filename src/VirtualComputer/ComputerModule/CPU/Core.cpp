@@ -12,7 +12,7 @@ Core::Core() : is_occupied { false } {
 }
 
 Core::~Core() {
-    
+    wait();
 }
 
 
