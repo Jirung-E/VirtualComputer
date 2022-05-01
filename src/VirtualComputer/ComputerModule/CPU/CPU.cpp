@@ -6,7 +6,7 @@ using namespace ComputerModule;
 using namespace Utils;
 
 
-CPU::CPU(Utils::num_t num_of_cores) : core_num { num_of_cores }, core { new Core[num_of_cores] }, running_core_num { 0 } {
+CPU::CPU(Utils::num_t num_of_cores) : core_num { num_of_cores }, core { new Core[num_of_cores] } {
     
 }
 
@@ -15,6 +15,10 @@ CPU::CPU() : CPU { 4 } {
 }
 
 CPU::~CPU() {
+    while(isRunning()) {
+        continue;
+    }
+    
     delete[] core;
 }
 
@@ -37,4 +41,13 @@ int CPU::findEmptyCoreIndex() {
     }
 
     return -1;
+}
+
+bool CPU::isRunning() const {
+    for(int i=0; i<core_num; ++i) {
+        if(core[i].isOccupied()) {
+            return true;
+        }
+    }
+    return false;
 }

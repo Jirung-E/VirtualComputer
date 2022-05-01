@@ -17,9 +17,19 @@ namespace ComputerModule {
         ~Computer();
         
     public:
+        bool isOn() const;
+        
         void powerOn();
         void powerOff();
+        
+        void install(Program* program);
+        void playProgram(std::string title);
+        
         void doSomething();
+    
+    private:
+        bool on() const;
+        bool off() const;
     };
 }
 
