@@ -7,8 +7,8 @@
 
 namespace ComputerModule {
     class Memory {
-        private: const Utils::num_t num_of_sectors;
-        private: Sector* const sector;
+        protected: const Utils::num_t num_of_sectors;
+        protected: Sector* const sector;
 
     private:
         Utils::num_t numOfFilledSectors() const;
@@ -21,7 +21,7 @@ namespace ComputerModule {
         size_t memorySize() const;
         float percentageOfMemoryFilled() const;
 
-        void push(Program* program);
+        virtual void push(Program* program);
         void pop(std::string title);
         Program* get(std::string title);
 		bool have(std::string title) const;

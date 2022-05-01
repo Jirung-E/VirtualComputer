@@ -30,15 +30,15 @@ void Computer::powerOn() {
     println("---------------------------------------------------");
     println("Booting...");
     for(int i=0; i<5; ++i) {
-        sleep(1000);
+        //sleep(1000);
         println(".");
     }
-    sleep(1500);
+    //sleep(1500);
     println("");
     println(" - - - - - - - - - - - - - - - - - - - - - - - - - ");
-    sleep(1000);
+    //sleep(1000);
     println("Computer: Hello, User!\n");
-    sleep(1000);
+    //sleep(1000);
 }
 
 void Computer::powerOff() {
@@ -51,11 +51,11 @@ void Computer::powerOff() {
         }
     }
     println("\nComputer: Bye, User!");
-    sleep(1000);
+    //sleep(1000);
     println("---------------------------------------------------");
     power = off();
     println("");
-    sleep(2000);
+    //sleep(2000);
 }
 
 void Computer::install(Program* program) {
